@@ -1,0 +1,31 @@
+{
+  "name": "mattrothenberg/statamic-mapbox-address",
+  "description": "A Mapbox autocomplete dropdown fieldtype for the Statamic Control Panel",
+  "license": "MIT",
+  "type": "statamic-addon",
+  "autoload": {
+    "psr-4": {
+      "Mattrothenberg\\StatamicMapboxAddress\\": "src"
+    }
+  },
+  "require": {
+    "php": "^7.3|^8.0",
+    "statamic/cms": "^3.0",
+    "pixelfear/composer-dist-plugin": "^0.1"
+  },
+  "extra": {
+    "download-dist": {
+      "url": "https://github.com/mattrothenberg/statamic-mapbox-address/releases/download/{$version}/dist.tar.gz",
+      "path": "dist"
+    },
+    "statamic": {
+      "name": "Statamic Mapbox Address",
+      "description": "A Mapbox autocomplete dropdown fieldtype for the Statamic Control Panel"
+    },
+    "laravel": {
+      "providers": [
+        "Mattrothenberg\\StatamicMapboxAddress\\ServiceProvider"
+      ]
+    }
+  }
+}
