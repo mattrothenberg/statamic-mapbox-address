@@ -1,5 +1,8 @@
 <template>
-  <div class="bg-red-lighter p-3 text-sm text-red" v-if="error.key || error.id">
+  <div
+    class="bg-red-lighter p-3 text-sm text-red"
+    v-if="error.key || error.id || !geoClient"
+  >
     <span
       v-html="
         __('Be sure to add the following environment variables to your .env')
@@ -74,7 +77,9 @@ export default {
   data() {
     return {
       options: [],
-      geoClient: geoService(mbxClient({ accessToken: this.meta.mapboxApiKey })),
+      geoClient: this.meta.mapboxApiKey
+        ? geoService(mbxClient({ accessToken: this.meta.mapboxApiKey }))
+        : null,
       error: {
         key: !this.meta.mapboxApiKey,
       },
@@ -91,6 +96,7 @@ export default {
       }
     },
     search: debounce((loading, search, vm) => {
+      if (!vm.geoClient) return;
       vm.geoClient
         .forwardGeocode({
           query: search,
