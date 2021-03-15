@@ -48,6 +48,7 @@ import debounce from "lodash.debounce";
 const mbxClient = require("@mapbox/mapbox-sdk");
 const geoService = require("@mapbox/mapbox-sdk/services/geocoding");
 
+// TODO: Figure out how to remove this stuff...
 vSelect.props.components.default = () => ({
   Deselect: {
     render: (createElement) => createElement("span", __("×")),
