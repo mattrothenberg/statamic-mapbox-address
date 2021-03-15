@@ -47,7 +47,7 @@ class Address extends Fieldtype
                 'display' => __('Language'),
                 'instructions' => __('Specify the language to use for response text and, for forward geocoding, query result weighting. Options are IETF language tags comprised of a mandatory ISO 639-1 language code and optionally one or more IETF subtags for country or script.'),
                 'width' => 50,
-                'default' => 'en'
+                'default' => ['en']
             ]
         ];
     }
