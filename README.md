@@ -23,8 +23,9 @@ MAPBOX_API_KEY=""
 Currently, only a few configuration options are supported, although [Mapbox's forward geocoding API exposes a variety of settings.](https://github.com/mapbox/mapbox-sdk-js/blob/main/docs/services.md#forwardgeocode).
 
 - `placeholder (string>)`: Placeholder text for the rendered picker.
-- `countries (Array<string>)`:  Limits results to the specified countries. Each item in the array should be an ISO 3166 alpha 2 country code.
+- `countries (Array<string>)`: Limits results to the specified countries. Each item in the array should be an ISO 3166 alpha 2 country code.
 - `featureTypes ("country" | "region" | "postcode" | "district" | "place" | "locality" | "neighborhood" | "address" | "poi" | "poi.landmark"):`: Filter results by feature types
+- `language (Array<string>)`: Specify the language to use for response text and, for forward geocoding, query result weighting. Options are IETF language tags comprised of a mandatory ISO 639-1 language code and optionally one or more IETF subtags for country or script.
 
 <img width="734" alt="Screen Shot 2021-03-15 at 7 45 53 AM" src="https://user-images.githubusercontent.com/5148596/111150336-5a1ce900-8564-11eb-8142-526809222a96.png">
 
@@ -71,7 +72,6 @@ address:
       wikidata: Q30
       short_code: us
       text: "United States"
-
 ```
 
 Please feel free to submit a pull request if you'd like to modify or improve this very basic serialization schema.
