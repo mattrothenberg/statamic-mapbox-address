@@ -41,6 +41,13 @@ class Address extends Fieldtype
                 'display' => __('Countries'),
                 'instructions' => __('Change the countries to search in. Two letters country codes (ISO 3166-1 alpha-2).'),
                 'width' => 50,
+            ],
+            'language' => [
+                'type' => 'taggable',
+                'display' => __('Language'),
+                'instructions' => __('Specify the language to use for response text and, for forward geocoding, query result weighting. Options are IETF language tags comprised of a mandatory ISO 639-1 language code and optionally one or more IETF subtags for country or script.'),
+                'width' => 50,
+                'default' => 'en'
             ]
         ];
     }

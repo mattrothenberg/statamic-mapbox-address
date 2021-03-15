@@ -102,6 +102,7 @@ export default {
           query: search,
           limit: 10,
           autocomplete: true,
+          language: vm.config.language,
           countries: vm.config.countries,
           types: vm.config.featureTypes,
         })
