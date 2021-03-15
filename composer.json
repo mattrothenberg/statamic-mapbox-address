@@ -2,6 +2,7 @@
   "name": "mattrothenberg/statamic-mapbox-address",
   "description": "A Mapbox autocomplete dropdown fieldtype for the Statamic Control Panel",
   "license": "MIT",
+  "version": "0.1.0",
   "type": "statamic-addon",
   "autoload": {
     "psr-4": {
