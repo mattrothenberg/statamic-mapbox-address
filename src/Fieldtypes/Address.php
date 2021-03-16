@@ -55,7 +55,7 @@ class Address extends Fieldtype
     public function preload()
     {
         return [
-            'mapboxApiKey' => env('MAPBOX_API_KEY', false)
+            'mapboxApiKey' => config('mapbox.api_key')
         ];
     }
 
