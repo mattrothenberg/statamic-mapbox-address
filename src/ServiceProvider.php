@@ -14,4 +14,11 @@ class ServiceProvider extends AddonServiceProvider
     protected $scripts = [
         __DIR__.'/../dist/js/address.js',
     ];
+
+    public function register()
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/mapbox.php', 'mapbox'
+        );
+    }
 }
