@@ -9,7 +9,7 @@ An address Autocomplete Field for Statamic V3, powered by [Mapbox](https://docs.
 Add the addon to your project via `composer`.
 
 ```bash
-composer require mattrothenberg\statamic-mapbox-address
+composer require mattrothenberg/statamic-mapbox-address
 ```
 
 Make sure to add the following environment variable, since this library uses [Mapbox](https://docs.mapbox.com/api/search/geocoding/) under the hood for address autocompletion. The addon **will not work** without a valid key.
