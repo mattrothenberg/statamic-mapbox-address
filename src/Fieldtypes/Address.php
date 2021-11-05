@@ -4,6 +4,8 @@ namespace Mattrothenberg\StatamicMapboxAddress\Fieldtypes;
 
 use Statamic\Facades\Antlers;
 use Statamic\Fields\Fieldtype;
+use Statamic\Facades\GraphQL;
+use Statamic\GraphQL\Types\ArrayType;
 
 class Address extends Fieldtype
 {
@@ -89,5 +91,15 @@ class Address extends Fieldtype
     public function process($data)
     {
         return $data;
+    }
+
+    /**
+     * Get the GraphQL type that should be used for processing
+     *
+     * @return \GraphQL\Type\Definition\Type
+     */
+    public function toGqlType()
+    {
+        return GraphQL::type(ArrayType::NAME);
     }
 }
