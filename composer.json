@@ -11,7 +11,7 @@
   },
   "require": {
     "php": "^7.3|^8.0",
-    "statamic/cms": "^3.0",
+    "statamic/cms": "^3.0|^4.0",
     "pixelfear/composer-dist-plugin": "^0.1"
   },
   "extra": {
